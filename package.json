@@ -1,0 +1,24 @@
+{
+  "name": "reactjs-am",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "liveServer": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Val8883/reactjs-am.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Val8883/reactjs-am/issues"
+  },
+  "homepage": "https://github.com/Val8883/reactjs-am#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}

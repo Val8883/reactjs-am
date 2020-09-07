@@ -1,70 +1,35 @@
-const data = {
-  title: 'myTitle',
-  subtitle: ' mySubtitle',
+let count = 0;
+
+const renderDecorator = (callback) => {
+  callback();
+  renderCounterApp();
 };
 
-const { title, subtitle } = data;
-
-let template = (
-  <div>
-    <p>{title}</p>
-    <p>{subtitle}</p>
-    <ol>
-      <li>item</li>
-      <li>item</li>
-      <li>item</li>
-      <li>item</li>
-    </ol>
-  </div>
-);
-
-const getLocation = (location) => (location ? location : 'Unknown');
-
-const user = {
-  name: 'Val',
-  age: 26,
-  userLocation: 'LA',
+const handleAddOne = () => {
+  ++count;
 };
 
-const { name, age, userLocation } = user;
+const handleMinusOne = () => {
+  if (count > 0) --count;
+};
 
-let secondTemplate = (
-  <div>
-    <h1>{name}</h1>
-    <p>Age {age}</p>
-    <p>City: {getLocation(userLocation)}</p>
-  </div>
-);
+const resetCounter = () => {
+  if (count > 0) count = 0;
+};
 
 let root = document.getElementById('app');
-ReactDOM.render(secondTemplate, root);
 
-// arrow fucntion
+const renderCounterApp = () => {
+  const template = (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={() => renderDecorator(handleAddOne)}>+1</button>
+      <button onClick={() => renderDecorator(handleMinusOne)}>-1</button>
+      <button onClick={() => renderDecorator(resetCounter)}>reset</button>
+    </div>
+  );
 
-// // ! arguments object - no longer bound with arrow functions
-// const add = function() {
-//   console.group('add function');
-//   console.log(arguments);
-//   console.log('name: ', add.name);
-//   console.groupEnd();
-// };
-// add();
+  ReactDOM.render(template, root);
+};
 
-// const arrowAdd = () => {
-//   //console.log(arguments);
-// };
-
-// // ! this keword - no longer bound
-
-// const newUser = {
-//   name: 'Valentine',
-//   cities: ['Chernivci', 'Kiev', 'LA'],
-//   printPlaceLived() {
-//     const that = this;
-//     this.cities.forEach(function(city) {
-//       console.log(city);
-//     });
-//   },
-// };
-
-// newUser.printPlaceLived();
+renderCounterApp();

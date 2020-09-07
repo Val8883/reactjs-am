@@ -1,119 +1,60 @@
 'use strict';
 
-var data = {
-  title: 'myTitle',
-  subtitle: ' mySubtitle'
+var count = 0;
+
+var renderDecorator = function renderDecorator(callback) {
+  callback();
+  renderCounterApp();
 };
 
-var title = data.title,
-    subtitle = data.subtitle;
-
-
-var template = React.createElement(
-  'div',
-  null,
-  React.createElement(
-    'p',
-    null,
-    title
-  ),
-  React.createElement(
-    'p',
-    null,
-    subtitle
-  ),
-  React.createElement(
-    'ol',
-    null,
-    React.createElement(
-      'li',
-      null,
-      'item'
-    ),
-    React.createElement(
-      'li',
-      null,
-      'item'
-    ),
-    React.createElement(
-      'li',
-      null,
-      'item'
-    ),
-    React.createElement(
-      'li',
-      null,
-      'item'
-    )
-  )
-);
-
-var getLocation = function getLocation(location) {
-  return location ? location : 'Unknown';
+var handleAddOne = function handleAddOne() {
+  ++count;
 };
 
-var user = {
-  name: 'Val',
-  age: 26,
-  userLocation: 'LA'
+var handleMinusOne = function handleMinusOne() {
+  if (count > 0) --count;
 };
 
-var name = user.name,
-    age = user.age,
-    userLocation = user.userLocation;
-
-
-var secondTemplate = React.createElement(
-  'div',
-  null,
-  React.createElement(
-    'h1',
-    null,
-    name
-  ),
-  React.createElement(
-    'p',
-    null,
-    'Age ',
-    age
-  ),
-  React.createElement(
-    'p',
-    null,
-    'City: ',
-    getLocation(userLocation)
-  )
-);
+var resetCounter = function resetCounter() {
+  if (count > 0) count = 0;
+};
 
 var root = document.getElementById('app');
-ReactDOM.render(secondTemplate, root);
 
-// arrow fucntion
+var renderCounterApp = function renderCounterApp() {
+  var template = React.createElement(
+    'div',
+    null,
+    React.createElement(
+      'h1',
+      null,
+      'Count: ',
+      count
+    ),
+    React.createElement(
+      'button',
+      { onClick: function onClick() {
+          return renderDecorator(handleAddOne);
+        } },
+      '+1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: function onClick() {
+          return renderDecorator(handleMinusOne);
+        } },
+      '-1'
+    ),
+    React.createElement(
+      'button',
+      { onClick: function onClick() {
+          return renderDecorator(resetCounter);
+        } },
+      'reset'
+    )
+  );
 
-// // ! arguments object - no longer bound with arrow functions
-// const add = function() {
-//   console.group('add function');
-//   console.log(arguments);
-//   console.log('name: ', add.name);
-//   console.groupEnd();
-// };
-// add();
+  ReactDOM.render(template, root);
+};
 
-// const arrowAdd = () => {
-//   //console.log(arguments);
-// };
-
-// // ! this keword - no longer bound
-
-// const newUser = {
-//   name: 'Valentine',
-//   cities: ['Chernivci', 'Kiev', 'LA'],
-//   printPlaceLived() {
-//     const that = this;
-//     this.cities.forEach(function(city) {
-//       console.log(city);
-//     });
-//   },
-// };
-
-// newUser.printPlaceLived();
+renderCounterApp();

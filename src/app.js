@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 function App() {
-  return React.createElement('h1', null, 'hello');
+  return <h1>hello</h1>;
 }
 
-render(App(), document.getElementById('app'));
+render(<App />, document.getElementById('app'));

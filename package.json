@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "build": "webpack --watch",
     "babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "liveServer": "live-server public"
   },
@@ -18,7 +19,14 @@
   },
   "homepage": "https://github.com/Val8883/reactjs-am#readme",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
   }
 }

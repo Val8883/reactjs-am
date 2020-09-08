@@ -1,14 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import IndecisionApp from './components/IndecisionApp';
 
-function App() {
-  return <h1>hellodsds</h1>;
-}
-
-class SomeClass {
-  name = 'val';
-}
-
-console.log(new SomeClass());
-
-render(<App />, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'));

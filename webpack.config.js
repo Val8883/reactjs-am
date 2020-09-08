@@ -22,4 +22,10 @@ module.exports = {
       },
     ],
   },
+  devtool: 'cheap-module-eval-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'public'),
+    compress: true,
+    port: 8883,
+  },
 };

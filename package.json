@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack",
-    "dev-server": "webpack-dev-server",
+    "server": "webpack-dev-server",
     "babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "liveServer": "live-server public"
   },
@@ -22,6 +22,7 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-modal": "^3.11.2",
     "webpack": "^4.44.1"
   },
   "devDependencies": {

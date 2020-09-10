@@ -1,7 +1,11 @@
 import React from 'react';
 import Option from './Option';
 
-export default function({ handleDeleteOptions, handleDeleteOption, options }) {
+export default function Options({
+  handleDeleteOptions,
+  handleDeleteOption,
+  options,
+}) {
   return (
     <div>
       <button onClick={handleDeleteOptions}>Remove All</button>

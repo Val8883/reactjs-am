@@ -7,6 +7,7 @@ export default function OptionModal({ selectedOption, handleCloseModal }) {
       isOpen={!!selectedOption}
       contentLabel='Selected Option'
       onRequestClose={handleCloseModal}
+      appElement={document.querySelector('body')}
     >
       <h3>Selected Option</h3>
       {selectedOption && <p>{selectedOption}</p>}

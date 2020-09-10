@@ -2,15 +2,16 @@ import React from 'react';
 
 export default function Option({ optionText, handleDeleteOption }) {
   return (
-    <div>
+    <li className='widget-list-item'>
       {optionText}
       <button
+        className='btn--link'
         onClick={(e) => {
           handleDeleteOption(optionText);
         }}
       >
         remove
       </button>
-    </div>
+    </li>
   );
 }

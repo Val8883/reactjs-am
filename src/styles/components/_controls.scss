@@ -1,0 +1,12 @@
+.controls {
+  color: palegoldenrod;
+  padding-bottom: $s-size;
+  &-form {
+    display: flex;
+    &-input {
+      flex-grow: 1;
+      margin-right: $xs-size;
+      border: 1px solid palevioletred;
+    }
+  }
+}

@@ -7,17 +7,24 @@ export default function Options({
   options,
 }) {
   return (
-    <div>
-      <button onClick={handleDeleteOptions}>Remove All</button>
+    <section className='widget'>
+      <div className='widget-header'>
+        <h3>Your Options:</h3>
+        <button className='btn--link ' onClick={handleDeleteOptions}>
+          Remove All
+        </button>
+      </div>
 
       {options.length === 0 && <p>Please add an option to get started!</p>}
-      {options.map((option) => (
-        <Option
-          key={option}
-          optionText={option}
-          handleDeleteOption={handleDeleteOption}
-        />
-      ))}
-    </div>
+      <ul className='widget-list'>
+        {options.map((option) => (
+          <Option
+            key={option}
+            optionText={option}
+            handleDeleteOption={handleDeleteOption}
+          />
+        ))}
+      </ul>
+    </section>
   );
 }

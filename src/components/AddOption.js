@@ -20,11 +20,11 @@ export default class AddOption extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div>
+      <div className='controls'>
         {error && <p>{error}</p>}
-        <form onSubmit={this.handleAddOption}>
-          <input type='text' name='option' />
-          <button>Add Option</button>
+        <form className='controls-form' onSubmit={this.handleAddOption}>
+          <input className='controls-form-input' type='text' name='option' />
+          <button className='sm-btn'>Add Option</button>
         </form>
       </div>
     );

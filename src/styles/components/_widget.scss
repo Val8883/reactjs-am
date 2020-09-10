@@ -1,0 +1,29 @@
+.widget {
+  box-shadow: $main-bs;
+  color: palevioletred;
+  &-header {
+    color: map-get($colors, item);
+    padding: $m-size;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-list {
+    color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    padding: 0 $m-size;
+
+    &-item {
+      background: map-get($colors, item);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: $s-size;
+      color: palegoldenrod;
+      border-radius: 2px;
+      margin-bottom: $m-size;
+      word-break: break-all;
+    }
+  }
+}

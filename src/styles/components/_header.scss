@@ -1,0 +1,17 @@
+.header {
+  background: $main-gradient;
+  padding: $m-size 0;
+  margin-bottom: xl-size;
+  color: map-get($colors, title);
+  box-shadow: $main-bs;
+
+  &__title {
+    font-size: l-size;
+  }
+
+  &__subtitle {
+    color: map-get($colors, subtitle);
+    font-size: $m-size;
+    font-weight: 500;
+  }
+}

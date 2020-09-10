@@ -1,0 +1,44 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 30rem;
+  max-width: 80%;
+  max-height: 60%;
+  overflow: scroll;
+  transform: translate(-50%, -50%);
+  padding: $m-size;
+  background: map-get($colors, item);
+  color: map-get($colors, title);
+
+  &-title {
+    color: map-get($colors, main-bg);
+  }
+
+  &-option {
+    color: palegoldenrod;
+    padding: $l-size;
+    font-size: $l-size;
+    word-break: break-all;
+  }
+
+  &-btn {
+    color: map-get($colors, main-bg);
+    background: none;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: paleturquoise;
+    font-size: $m-size;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: map-get($colors, main-bg);
+}

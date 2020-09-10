@@ -1,0 +1,52 @@
+.big-btn {
+  background: map-get($colors, primary-btn);
+  color: map-get($colors, title);
+  border: none;
+  box-shadow: $main-bs;
+  padding: $s-size;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: $l-size;
+  width: 100%;
+  margin: $xl-size 0;
+
+  &:hover {
+    box-shadow: $main-bs-hover;
+  }
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}
+
+.sm-btn {
+  background: map-get($colors, primary-btn);
+  color: map-get($colors, title);
+  box-shadow: $main-bs;
+  border: none;
+  padding: $s-size;
+  border-radius: 2px;
+
+  &:hover {
+    box-shadow: $main-bs-hover;
+  }
+  &:disabled {
+    opacity: 0.5;
+    box-shadow: none;
+  }
+}
+
+.btn--link {
+  background: map-get($colors, title);
+  border: none;
+  border-radius: 2px;
+  box-shadow: $main-bs;
+  color: map-get($colors, subtitle);
+  padding: $xs-size;
+  flex-shrink: 0;
+  margin-left: $s-size;
+
+  &:hover {
+    box-shadow: $main-bs-hover;
+  }
+}

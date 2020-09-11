@@ -1,21 +1,6 @@
-// Gradients
-$main-gradient: linear-gradient(
-  to right,
-  #c33764,
-  #1d2671
-); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-$colors: (
-  title: whitesmoke,
-  subtitle: #161e66,
-  main-bg: #161e66,
-  primary-btn: #aa2751,
-  item: #bb3366,
-);
-
 //Spacing
 $xs-size: 0.4rem;
-$s-size: 0.8rem;
+$s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;

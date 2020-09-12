@@ -46,5 +46,11 @@ module.exports = {
     port: 8883,
     //  HTML5 History API, the index.html page will likely have to be served in place of any 404 responses.
     historyApiFallback: true,
+    //disableDotRule: true,
+    watchContentBase: true,
+    hot: true,
+    injectClient: false,
+    transportMode: 'ws',
+    quiet: true,
   },
 };

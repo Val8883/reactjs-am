@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function EditExpensePage() {
+export default function EditPage() {
   return (
     <div>
       <h1>This is EditExpensePage</h1>

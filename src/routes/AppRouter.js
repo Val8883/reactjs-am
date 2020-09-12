@@ -5,28 +5,39 @@ import Header from '../components/Header';
 
 const DashboardPage = lazy(() =>
   import(
-    /* webpackChunkName: "DashboardPage" */ '../components/pages/DashbordPage'
+    /* webpackChunkName: "DashboardPage" */
+    '../components/pages/DashbordPage'
   )
 );
 const AddPage = lazy(() =>
-  import(/* webpackChunkName: "AddPage" */ '../components/pages/AddPage')
+  import(
+    /* webpackChunkName: "AddPage" */
+    '../components/pages/AddPage'
+  )
 );
 const EditPage = lazy(() =>
-  import(/* webpackChunkName: "EditPage" */ '../components/pages/EditPage')
+  import(
+    /* webpackChunkName: "EditPage" */
+    '../components/pages/EditPage'
+  )
 );
 const HelpPage = lazy(() =>
-  import(/* webpackChunkName: "HelpPage" */ '../components/pages/HelpPage')
+  import(
+    /* webpackChunkName: "HelpPage" */
+    '../components/pages/HelpPage'
+  )
 );
 const NotFoundPage = lazy(() =>
   import(
-    /* webpackChunkName: "NotFoundPage" */ '../components/pages/NotFoundPage'
+    /* webpackChunkName: "NotFoundPage" */
+    '../components/pages/NotFoundPage'
   )
 );
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loadin...</div>}>
+      <Suspense fallback={<div></div>}>
         <Header />
         <Switch>
           <Route path='/' component={DashboardPage} exact />

@@ -3,28 +3,22 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from '../components/Header';
 
-const DashboardPage = lazy(() =>
+const HomePage = lazy(() =>
   import(
-    /* webpackChunkName: "DashboardPage" */
-    '../components/pages/DashbordPage'
+    /* webpackChunkName: "HomePage" */
+    '../components/pages/HomePage'
   )
 );
-const AddPage = lazy(() =>
+const PortfolioPage = lazy(() =>
   import(
-    /* webpackChunkName: "AddPage" */
-    '../components/pages/AddPage'
+    /* webpackChunkName: "PortfolioPage" */
+    '../components/pages/PortfolioPage'
   )
 );
-const EditPage = lazy(() =>
+const ContactPage = lazy(() =>
   import(
-    /* webpackChunkName: "EditPage" */
-    '../components/pages/EditPage'
-  )
-);
-const HelpPage = lazy(() =>
-  import(
-    /* webpackChunkName: "HelpPage" */
-    '../components/pages/HelpPage'
+    /* webpackChunkName: "ContactPage" */
+    '../components/pages/ContactPage'
   )
 );
 const NotFoundPage = lazy(() =>
@@ -38,12 +32,12 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <Suspense fallback={<div></div>}>
+        <h1>Portfolio</h1>
         <Header />
         <Switch>
-          <Route path='/' component={DashboardPage} exact />
-          <Route path='/create' component={AddPage} />
-          <Route path='/edit/:id' component={EditPage} />
-          <Route path='/help' component={HelpPage} />
+          <Route path='/' component={HomePage} exact />
+          <Route path='/portfolio' component={PortfolioPage} />
+          <Route path='/contact' component={ContactPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </Suspense>

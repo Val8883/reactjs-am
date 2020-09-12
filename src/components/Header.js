@@ -9,17 +9,13 @@ export default function Header() {
           {' '}
           Home
         </NavLink>
-        <NavLink activeClassName='active-link' to='/edit'>
+        <NavLink activeClassName='active-link' to='/portfolio'>
           {' '}
-          Edit
+          Portfolio
         </NavLink>
-        <NavLink activeClassName='active-link' to='/create'>
+        <NavLink activeClassName='active-link' to='/contact'>
           {' '}
-          Create
-        </NavLink>
-        <NavLink activeClassName='active-link' to='/help'>
-          {' '}
-          Help
+          Contact
         </NavLink>
       </nav>
     </header>

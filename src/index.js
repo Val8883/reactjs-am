@@ -3,4 +3,9 @@ import ReactDOM from 'react-dom';
 import AppRouter from './routes/AppRouter';
 import './styles/styles.scss';
 
-ReactDOM.render(<AppRouter />, document.getElementById('app'));
+ReactDOM.render(
+  <React.StrictMode>
+    <AppRouter />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

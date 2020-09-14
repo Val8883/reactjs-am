@@ -1,0 +1,44 @@
+import { createStore } from 'redux';
+
+const initialState = { count: 0 };
+
+function reducer(state = initialState, { type }) {
+  switch (type) {
+    case 'INCREMENT':
+      return { count: state.count + 1 };
+    case 'DECREMENT':
+      return { count: state.count - 1 };
+    case 'RESET':
+      return { count: 0 };
+    default:
+      return state;
+  }
+}
+
+const store = createStore(reducer);
+
+console.log(store);
+
+console.log(store.getState());
+
+store.dispatch({
+  type: 'INCREMENT',
+});
+console.log(store.getState());
+
+store.dispatch({
+  type: 'INCREMENT',
+});
+console.log(store.getState());
+
+store.dispatch({
+  type: 'DECREMENT',
+});
+
+console.log(store.getState());
+
+store.dispatch({
+  type: 'RESET',
+});
+
+console.log(store.getState());

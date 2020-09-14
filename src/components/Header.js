@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
   return (
     <header>
+      <h1>Expensify</h1>
       <nav>
         <NavLink to='/' exact activeClassName='active-link'>
           {' '}

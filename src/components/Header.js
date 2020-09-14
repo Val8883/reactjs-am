@@ -9,7 +9,7 @@ export default function Header() {
           {' '}
           Home
         </NavLink>
-        <NavLink activeClassName='active-link' to='/portfolio'>
+        <NavLink activeClassName='active-link' exact to='/portfolio'>
           {' '}
           Portfolio
         </NavLink>

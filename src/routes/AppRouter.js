@@ -15,6 +15,13 @@ const PortfolioPage = lazy(() =>
     '../components/pages/PortfolioPage'
   )
 );
+
+const PortfolioItemPage = lazy(() =>
+  import(
+    /* webpackChunkName: "PortfolioItemPage" */
+    '../components/pages/PortfolioItemPage'
+  )
+);
 const ContactPage = lazy(() =>
   import(
     /* webpackChunkName: "ContactPage" */
@@ -36,7 +43,8 @@ export default function AppRouter() {
         <Header />
         <Switch>
           <Route path='/' component={HomePage} exact />
-          <Route path='/portfolio' component={PortfolioPage} />
+          <Route path='/portfolio' exact component={PortfolioPage} />
+          <Route path='/portfolio/:id' component={PortfolioItemPage} />
           <Route path='/contact' component={ContactPage} />
           <Route component={NotFoundPage} />
         </Switch>

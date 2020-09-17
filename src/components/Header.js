@@ -8,7 +8,7 @@ export default function Header() {
       <nav>
         <NavLink to='/' exact activeClassName='active-link'>
           {' '}
-          Home
+          Dashboard
         </NavLink>
         <NavLink activeClassName='active-link' to='/edit'>
           {' '}

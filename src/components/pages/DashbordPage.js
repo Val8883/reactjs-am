@@ -1,9 +1,12 @@
 import React from 'react';
+import ExpenseList from '../ExpenseList';
+import ExpenseListFilters from '../ExpenseListFilters';
 
 export default function DashbordPage() {
   return (
     <div>
-      <h1>This is DashbordPage</h1>
+      <ExpenseListFilters />
+      <ExpenseList />
     </div>
   );
 }

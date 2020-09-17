@@ -4,7 +4,7 @@ export const addExpense = ({
   description = '',
   note = '',
   amount = 0,
-  createdAt = 0,
+  createdAt = Date.now(),
 } = {}) => ({
   type: 'ADD_EXPENSE',
 

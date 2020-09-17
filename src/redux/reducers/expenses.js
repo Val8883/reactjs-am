@@ -1,3 +1,5 @@
+import * as types from '../actions/actionTypes';
+
 const defaultState = [
   {
     id: '0cf4f2cc-1317-4fe0-a44e-5dad7b1f4e3c',
@@ -24,11 +26,11 @@ const defaultState = [
 
 const expensesReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case 'ADD_EXPENSE':
+    case types.ADD_EXPENSE:
       return [...state, action.expense];
-    case 'REMOVE_EXPENSE':
+    case types.REMOVE_EXPENSE:
       return state.filter(({ id }) => id !== action.id);
-    case 'EDIT_EXPENSE':
+    case types.EDIT_EXPENSE:
       return state.map((expense) =>
         expense.id === action.id ? { ...expense, ...action.updates } : expense
       );

@@ -10,10 +10,6 @@ export default function Header() {
           {' '}
           Dashboard
         </NavLink>
-        <NavLink activeClassName='active-link' to='/edit'>
-          {' '}
-          Edit
-        </NavLink>
         <NavLink activeClassName='active-link' to='/create'>
           {' '}
           Create
